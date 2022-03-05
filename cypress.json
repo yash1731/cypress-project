@@ -1,3 +1,9 @@
 {
-  "projectId": "wrd1nz"
+  "projectId": "wrd1nz",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+      "overwrite": false,
+      "html": false,
+      "json": true
+  }
 }

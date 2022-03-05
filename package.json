@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:chrome": "cypress run --browser chrome",
+    "combine:report": "mochawesome-merge ./mochawesome-report/*.json -o index.json",
+    "generate:report": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
   },
   "keywords": [],
   "author": "Yashpal Dewangan",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^9.5.1"
+    "cypress": "^9.5.1",
+    "mochawesome": "^7.1.1",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.1.0"
   }
 }
