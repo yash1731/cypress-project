@@ -36,6 +36,9 @@ describe('Basic Desktop Tests', () =>{
 
         cy.fixture('example').then((user) => {
         cy.get('.login').click()
+
+         // verify page and links
+         
         cy.url().should('include','my-account')       
         cy.get('#email').type(user.email)
         cy.get('#passwd').type(user.password)
